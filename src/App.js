@@ -41,9 +41,9 @@ function App() {
         <Button
           variant='contained'
           color='primary'
-          onClick={async () => {
-            const data = await makeRequest()
-            setText(JSON.stringify(data))
+          onClick={() => {
+            makeRequest().then(data => setText(JSON.stringify(data)))
+            console.log('same time')
           }}>
           GET
         </Button>
