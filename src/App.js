@@ -42,7 +42,7 @@ function App() {
           variant='contained'
           color='primary'
           onClick={() => {
-            makeRequest().then(data => setText(JSON.stringify(data)))
+            makeRequest().then(data => setText(JSON.stringify(data.bpi)))
             console.log('same time')
           }}>
           GET
